@@ -17,6 +17,26 @@ A modern, production-ready personal website built with Next.js, TypeScript, and 
 
 ---
 
+## 🐛 Debug Borders (Development Only)
+
+The website includes optional debug borders to help visualize spacing and layout during development:
+
+- **RED borders**: Section boundaries
+- **YELLOW boxes**: Top padding/spacing above section titles  
+- **GREEN boxes**: Bottom padding/spacing after section content
+
+**To toggle debug borders:**
+
+1. Open `/config/debugBorders.ts`
+2. Set `DEBUG_BORDERS_ENABLED` to `true` (show) or `false` (hide)
+3. Make sure to set it to `false` before deploying to production
+
+```typescript
+export const DEBUG_BORDERS_ENABLED = false; // Set to true to show debug borders
+```
+
+---
+
 ## 🏗️ Architecture & Design Decisions
 
 ### Technology Stack
@@ -324,7 +344,21 @@ npm run lint
 
 ---
 
-## 📄 License
+## � Documentation
+
+Additional documentation files are located in the `/docs` folder:
+
+- **QUICKSTART.md**: Quick setup guide for getting started
+- **PROJECT_SUMMARY.md**: High-level project overview
+- **CUSTOMIZATION_CHECKLIST.md**: Step-by-step customization guide
+- **ADD_PHOTOS_GUIDE.md**: Instructions for adding images
+- **DEPLOYMENT.md**: Detailed deployment instructions
+- **CHANGES.md**: Change log and version history
+- **ITERATION_*.md**: Development iteration notes
+
+---
+
+## �📄 License
 
 This project is open source and available for personal use. Feel free to fork and customize for your own website!
 

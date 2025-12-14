@@ -6,8 +6,9 @@ import { motion } from 'framer-motion';
 const navItems = [
   { name: 'Home', href: '#home' },
   { name: 'About Me', href: '#about' },
-  { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Societies', href: '#societies' },
+  { name: 'Projects', href: '#projects' },
 ];
 
 export default function Navbar() {
@@ -48,23 +49,14 @@ export default function Navbar() {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled ? 'bg-black/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-[#050b15]/90 backdrop-blur-lg shadow-lg' : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      transition={{ duration: 0.72, delay: 0.72 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo/Name */}
-          <motion.div
-            className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            onClick={() => scrollToSection('#home')}
-          >
-            VG
-          </motion.div>
-
+        <div className="flex items-center justify-center h-16">
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
@@ -78,7 +70,7 @@ export default function Navbar() {
                   <motion.div
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600"
                     layoutId="navbar-indicator"
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.36 }}
                   />
                 )}
               </button>
@@ -106,7 +98,7 @@ export default function Navbar() {
 
       {/* Mobile Menu (simplified for now) */}
       <div className="md:hidden">
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-black/95 backdrop-blur-lg">
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 backdrop-blur-lg">
           {navItems.map((item) => (
             <button
               key={item.name}

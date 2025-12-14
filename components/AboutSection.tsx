@@ -3,82 +3,111 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import ParticleBackground from './ParticleBackground';
+
+const skills = [
+  {
+    title: 'Full Stack Development',
+    description: 'Experienced in building modern web applications with React, Node.js, and various databases.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      </svg>
+    ),
+  },
+  {
+    title: 'UI/UX Design',
+    description: 'Creating intuitive and visually appealing interfaces that users love.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Performance Optimization',
+    description: 'Ensuring applications are fast, efficient, and scalable.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Collaboration',
+    description: 'Working effectively in teams and communicating technical concepts clearly.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+  },
+];
+
 
 export default function AboutSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  const skills = [
-    'JavaScript', 'TypeScript', 'React', 'Next.js',
-    'Node.js', 'Python', 'AWS', 'Docker',
-    'Git', 'UI/UX Design', 'APIs', 'Databases'
-  ];
+  const isInView = useInView(ref, { once: true, margin: '0px' });
 
   return (
     <section
       id="about"
-      ref={ref}
-      className="min-h-screen flex items-center justify-center py-20 px-4"
+      className="relative flex items-start justify-center px-4 bg-gradient-to-b from-[#0a1220] via-[#050b15] to-[#0a1220]"
     >
-      <div className="max-w-6xl w-full">
+      <ParticleBackground particleCount={46} colorFrom="from-blue-400" colorTo="to-purple-400" fadeDirection="both" />
+      
+      {/* Seamless blend overlays */}
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[#0a1220] to-transparent pointer-events-none z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#0a1220] pointer-events-none z-10" />
+      
+      <div ref={ref} className="max-w-6xl w-full relative z-10 pt-[7.5rem]">
+        {/* Yellow box to highlight spacing above title - invisible but spacing preserved */}
+        <div className="absolute top-0 left-0 right-0 h-[7.5rem] pointer-events-none z-50" />
+        
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.152 }}
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              About Me
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center">
+            <span className="text-white">About </span>
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Me
             </span>
           </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mx-auto mb-6"></div>
+          <p className="text-center text-gray-400 mb-4 max-w-3xl mx-auto text-lg">
+            I&apos;m a passionate developer who loves crafting elegant solutions to complex problems. With a strong foundation in both frontend and backend technologies, I specialize in building scalable applications that make a difference.
+          </p>
+          <p className="text-center text-gray-400 mb-12 max-w-3xl mx-auto text-lg">
+            <span className="text-purple-400 font-semibold">Bachelor of Computer Science</span> graduate from Monash University with a focus on software engineering and full-stack development.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left column - Description */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6"
-          >
-            <p className="text-lg text-gray-300 leading-relaxed">
-              I'm a passionate developer who loves building elegant solutions to complex problems. 
-              With a strong foundation in modern web technologies, I specialize in creating 
-              performant, user-friendly applications that make a difference.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to 
-              open-source projects, and constantly learning to stay at the cutting edge of 
-              software development.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              I believe in writing clean, maintainable code and creating experiences that users 
-              love. Let's build something amazing together!
-            </p>
-          </motion.div>
-
-          {/* Right column - Skills */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <h3 className="text-2xl font-bold mb-6 text-white">Skills & Technologies</h3>
-            <div className="grid grid-cols-2 gap-4">
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={skill}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.05 }}
-                  className="bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
-                >
-                  <p className="text-center font-semibold text-gray-200">{skill}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={skill.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.72, delay: 0.36 + index * 0.12 }}
+              className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+            >
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center text-blue-400 group-hover:text-purple-400 transition-colors">
+                  {skill.icon}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-white mb-2">{skill.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{skill.description}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
+        
+        {/* Green box to highlight spacing at bottom - invisible but spacing preserved */}
+        <div className="h-[3.75rem] pointer-events-none mt-8" />
       </div>
     </section>
   );
