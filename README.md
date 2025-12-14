@@ -1,16 +1,6 @@
 # Personal Website - Vincent Giang
 
-A modern, responsive person---
-
-## 🚀 Deployment & Hosting
-
-The website is deployed with continuous integration from the main branch. The custom domain **vincentgiang.com** is managed through Cloudflare, providing:
-- DNS management and routing
-- SSL/TLS encryption
-- DDoS protection and security features
-- Global CDN for fast content delivery worldwide
-
----ite showcasing my projects, experience, and skills. Built with performance and user experience in mind, featuring smooth animations and an intuitive interface.
+A modern, responsive personal portfolio website showcasing my projects, experience, and skills. Built with performance and user experience in mind, featuring smooth animations and an intuitive interface.
 
 🌐 **Live Site**: [vincentgiang.com](https://vincentgiang.com)
 
@@ -27,7 +17,7 @@ The website is deployed with continuous integration from the main branch. The cu
 
 ---
 
-## �️ Technologies Used
+## 🛠️ Technologies Used
 
 ### Core Framework
 - **Next.js 14** with App Router - Modern React framework with excellent performance and SEO capabilities
@@ -83,18 +73,12 @@ The website is fully responsive and optimized for all screen sizes:
 
 ---
 
-## 🚀 Deployment
+## 🚀 Deployment & Hosting
 
-Deployed on **Vercel** with continuous deployment from the main branch. The platform provides:
-- Global CDN for fast content delivery
-- Automatic HTTPS
-- Optimized for Next.js applications
-- Zero-configuration deployment
-
----
-
-## � License
-
-This project is open source and available for viewing. Feel free to reach out if you have any questions about the implementation.
+The website is deployed with continuous integration from the main branch. The custom domain **vincentgiang.com** is managed through Cloudflare, providing:
+- DNS management and routing
+- SSL/TLS encryption
+- DDoS protection and security features
+- Global CDN for fast content delivery worldwide
 
 ---
