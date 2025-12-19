@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import LoadingScreen from '@/components/LoadingScreen';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import HomeSection from '@/components/HomeSection';
 import AboutSection from '@/components/AboutSection';
@@ -12,8 +11,6 @@ import SocietiesSection from '@/components/SocietiesSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     // Ensure the page loads properly
     if (typeof window !== 'undefined') {
@@ -22,27 +19,19 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <AnimatePresence mode="wait">
-        {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
-      </AnimatePresence>
-
-      {!loading && (
-        <motion.main 
-          className="relative"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          <Navbar />
-          <HomeSection />
-          <AboutSection />
-          <ExperienceSection />
-          <SocietiesSection />
-          <ProjectsSection />
-          <Footer />
-        </motion.main>
-      )}
-    </>
+    <motion.main 
+      className="relative"
+      initial={{ opacity: 0, backgroundColor: '#000000' }}
+      animate={{ opacity: 1, backgroundColor: 'transparent' }}
+      transition={{ duration: 0.8 }}
+    >
+      <Navbar />
+      <HomeSection />
+      <AboutSection />
+      <ExperienceSection />
+      <SocietiesSection />
+      <ProjectsSection />
+      <Footer />
+    </motion.main>
   );
 }

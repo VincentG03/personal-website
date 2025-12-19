@@ -82,7 +82,7 @@ export default function ExperienceSection() {
       id="experience"
       className="relative min-h-screen flex items-start justify-center px-4 bg-gradient-to-b from-[#0a1220] via-[#050b15] to-[#0a1220]"
     >
-      <ParticleBackground particleCount={46} colorFrom="from-blue-400" colorTo="to-purple-400" fadeDirection="both" />
+      <ParticleBackground particleCount={46} colorFrom="from-blue-400" colorTo="to-[#d946ef]" fadeDirection="both" />
       
       {/* Seamless blend overlays */}
       <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[#0a1220] to-transparent pointer-events-none z-10" />
@@ -99,11 +99,11 @@ export default function ExperienceSection() {
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center">
             <span className="text-white">Work </span>
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="text-blue-400">
               Experience
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
           <p className="text-center text-gray-400 mb-12 max-w-3xl mx-auto">
             My professional journey building impactful products and leading teams.
           </p>
@@ -120,11 +120,11 @@ export default function ExperienceSection() {
             >
               {/* Single role company */}
               {exp.role && (
-                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10">
+                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-xl hover:shadow-[#e879f9]/15">
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Company Logo */}
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-gray-700 flex items-center justify-center overflow-hidden">
+                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-gradient-to-br from-blue-500/20 to-[#d946ef]/20 border border-gray-700 flex items-center justify-center overflow-hidden">
                         <svg className="w-12 h-12 text-blue-400/40" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd" />
                         </svg>
@@ -136,7 +136,7 @@ export default function ExperienceSection() {
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
                         <div>
                           <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">{exp.role}</h3>
-                          <p className="text-lg text-purple-400 font-semibold">{exp.company}</p>
+                          <p className="text-lg text-[#d946ef] font-semibold">{exp.company}</p>
                         </div>
                         <span className="inline-block px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold whitespace-nowrap self-start">
                           {exp.period} - {exp.endPeriod}
@@ -162,11 +162,11 @@ export default function ExperienceSection() {
 
               {/* Multi-role company (promotions) */}
               {exp.roles && (
-                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10">
+                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-xl hover:shadow-[#e879f9]/15">
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Company Logo */}
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-gray-700 flex items-center justify-center overflow-hidden">
+                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-gradient-to-br from-blue-500/20 to-[#d946ef]/20 border border-gray-700 flex items-center justify-center overflow-hidden">
                         <svg className="w-12 h-12 text-blue-400/40" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd" />
                         </svg>
@@ -176,7 +176,7 @@ export default function ExperienceSection() {
                     {/* Content */}
                     <div className="flex-1">
                       <div className="mb-6">
-                        <h3 className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">{exp.company}</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#d946ef] mb-2">{exp.company}</h3>
                         <p className="text-gray-400 text-sm">Multiple roles through career progression</p>
                       </div>
 
@@ -185,7 +185,7 @@ export default function ExperienceSection() {
                         {exp.roles.map((role, roleIndex) => (
                           <div 
                             key={roleIndex}
-                            className="ml-0 md:ml-6 pl-6 border-l-2 border-purple-500/30 hover:border-purple-500 transition-colors"
+                            className="ml-0 md:ml-6 pl-6 border-l-2 border-[#e879f9]/30 hover:border-[#e879f9]/70 transition-colors"
                           >
                             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
                               <h4 className="text-xl font-bold text-white">{role.role}</h4>

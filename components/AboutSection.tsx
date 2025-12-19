@@ -54,7 +54,7 @@ export default function AboutSection() {
       id="about"
       className="relative flex items-start justify-center px-4 bg-gradient-to-b from-[#0a1220] via-[#050b15] to-[#0a1220]"
     >
-      <ParticleBackground particleCount={46} colorFrom="from-blue-400" colorTo="to-purple-400" fadeDirection="both" />
+      <ParticleBackground particleCount={46} colorFrom="from-blue-400" colorTo="to-[#d946ef]" fadeDirection="both" />
       
       {/* Seamless blend overlays */}
       <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[#0a1220] to-transparent pointer-events-none z-10" />
@@ -71,16 +71,16 @@ export default function AboutSection() {
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center">
             <span className="text-white">About </span>
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="text-blue-400">
               Me
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
           <p className="text-center text-gray-400 mb-4 max-w-3xl mx-auto text-lg">
             I&apos;m a passionate developer who loves crafting elegant solutions to complex problems. With a strong foundation in both frontend and backend technologies, I specialize in building scalable applications that make a difference.
           </p>
           <p className="text-center text-gray-400 mb-12 max-w-3xl mx-auto text-lg">
-            <span className="text-purple-400 font-semibold">Bachelor of Computer Science</span> graduate from Monash University with a focus on software engineering and full-stack development.
+            <span className="text-[#d946ef] font-semibold">Bachelor of Computer Science</span> graduate from Monash University with a focus on software engineering and full-stack development.
           </p>
         </motion.div>
 
@@ -91,10 +91,10 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.72, delay: 0.36 + index * 0.12 }}
-              className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
+              className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#e879f9]/20"
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center text-blue-400 group-hover:text-purple-400 transition-colors">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-[#d946ef]/20 flex items-center justify-center text-blue-400 group-hover:text-[#e879f9] transition-colors">
                   {skill.icon}
                 </div>
                 <div className="flex-1">

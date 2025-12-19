@@ -57,7 +57,7 @@ export default function SocietiesSection() {
       id="societies"
       className="relative flex items-start justify-center px-4 bg-gradient-to-b from-[#050b15] via-[#0a1220] to-[#050b15]"
     >
-      <ParticleBackground particleCount={39} colorFrom="from-purple-400" colorTo="to-blue-400" fadeDirection="both" />
+      <ParticleBackground particleCount={39} colorFrom="from-[#d946ef]" colorTo="to-blue-400" fadeDirection="both" />
       
       {/* Seamless blend overlays */}
       <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[#050b15] to-transparent pointer-events-none z-10" />
@@ -74,11 +74,11 @@ export default function SocietiesSection() {
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center">
             <span className="text-white">Student </span>
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="text-blue-400">
               Societies
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
           <p className="text-center text-gray-400 mb-12 max-w-3xl mx-auto">
             Leadership roles and contributions to campus organizations and communities.
           </p>
@@ -91,10 +91,10 @@ export default function SocietiesSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.72, delay: 0.24 + index * 0.12 }}
-              className="group relative bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30"
+              className="group relative bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#e879f9]/20"
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center text-blue-400 group-hover:text-blue-300 transition-colors border border-blue-500/30">
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-[#d946ef]/20 flex items-center justify-center text-blue-400 group-hover:text-[#e879f9] transition-colors border border-blue-500/30">
                   {society.icon}
                 </div>
                 <div className="flex-1">

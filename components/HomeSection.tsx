@@ -9,7 +9,7 @@ export default function HomeSection() {
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-[#050b15] via-[#0d1a30] to-[#0a1220]"
     >
       {/* Background gradient animation */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0d1a30]/30 via-purple-900/20 to-[#0d1a30]/30 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0d1a30]/30 via-[#8b2f7e]/20 to-[#0d1a30]/30 z-0" />
       
       {/* Seamless blend overlay at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-[#0a1220] pointer-events-none z-10" />
@@ -55,11 +55,11 @@ export default function HomeSection() {
           className="order-2 md:order-1"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.152, delay: 0.288 }}
+          transition={{ duration: 1.3824, delay: 0.3456 }}
         >
           <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
             {/* Placeholder for portrait image */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-2xl animate-pulse-slow" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-[#d946ef] opacity-20 blur-2xl animate-pulse-slow" />
             <div className="relative w-full h-full rounded-full border-4 border-blue-500/30 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
               {/* Replace this div with your image:
                   <img src="/your-portrait.jpg" alt="Vincent Giang" className="w-full h-full object-cover" />
@@ -79,10 +79,10 @@ export default function HomeSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.152, delay: 0.288 }}
+            transition={{ duration: 1.3824, delay: 0.3456 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="text-blue-400">
                 Vincent Giang
               </span>
             </h1>
@@ -92,7 +92,7 @@ export default function HomeSection() {
             className="text-xl md:text-2xl text-gray-300 mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.152, delay: 0.576 }}
+            transition={{ duration: 1.3824, delay: 0.6912 }}
           >
             Developer • Creator • Problem Solver
           </motion.p>
@@ -101,7 +101,7 @@ export default function HomeSection() {
             className="text-base md:text-lg text-gray-400 mb-8 max-w-xl leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.152, delay: 0.72 }}
+            transition={{ duration: 1.3824, delay: 0.864 }}
           >
             Turning coffee into code and ideas into reality. 
             I build things that make people&apos;s lives easier, one pixel at a time. 🚀
@@ -111,20 +111,8 @@ export default function HomeSection() {
             className="flex gap-4 justify-center md:justify-start flex-wrap"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.152, delay: 0.864 }}
+            transition={{ duration: 1.3824, delay: 1.0368 }}
           >
-            <button
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 font-semibold"
-            >
-              About Me
-            </button>
-            <button
-              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 font-semibold"
-            >
-              View Experience
-            </button>
             <a
               href="/resume.pdf"
               download="Vincent_Giang_Resume.pdf"

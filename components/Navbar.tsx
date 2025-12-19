@@ -68,7 +68,7 @@ export default function Navbar() {
                 {item.name}
                 {activeSection === item.href.substring(1) && (
                   <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-[#d946ef]"
                     layoutId="navbar-indicator"
                     transition={{ duration: 0.36 }}
                   />
