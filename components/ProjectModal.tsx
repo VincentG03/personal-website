@@ -12,6 +12,9 @@ interface ProjectModalProps {
     tech: string[];
     gradient: string;
     image: string;
+    features?: string[];
+    implementation?: string;
+    challenges?: string;
   };
 }
 
@@ -101,26 +104,37 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3">Key Features</h3>
                     <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                          <path d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span>Details coming soon...</span>
-                      </li>
+                      {project.features ? (
+                        project.features.map((feature, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                              <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>{feature}</span>
+                          </li>
+                        ))
+                      ) : (
+                        <li className="flex items-start gap-2">
+                          <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M5 13l4 4L19 7"></path>
+                          </svg>
+                          <span>Details coming soon...</span>
+                        </li>
+                      )}
                     </ul>
                   </div>
 
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3">Technical Implementation</h3>
                     <p className="leading-relaxed">
-                      Details coming soon...
+                      {project.implementation || 'Details coming soon...'}
                     </p>
                   </div>
 
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3">Challenges & Solutions</h3>
                     <p className="leading-relaxed">
-                      Details coming soon...
+                      {project.challenges || 'Details coming soon...'}
                     </p>
                   </div>
                 </div>
