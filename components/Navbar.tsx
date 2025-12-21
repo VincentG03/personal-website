@@ -48,7 +48,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className={`hidden md:fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      className={`hidden md:block fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled ? 'bg-[#050b15]/90 backdrop-blur-lg shadow-lg' : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
