@@ -7,42 +7,54 @@ import ParticleBackground from './ParticleBackground';
 
 const societies = [
   {
-    club: 'Computer Science Society',
-    role: 'President',
-    description: 'Led the largest technical society on campus, organizing hackathons, workshops, and networking events for 500+ members. Managed a team of 15 executives and coordinated with industry partners.',
+    club: 'InvestEd Students\' Collective',
+    role: 'Publications Lead',
+    period: 'Jun 2024',
+    endPeriod: 'Oct 2025',
+    logo: '/images/InvestEd.jpeg',
+    description: 'LinkedIn finance content, scaling the follower base from 30 to 550+ within a year. Led an "Investing 101" workshop for 40+ students, mentoring participants on pitching portfolios for diverse investor personas to improve campus financial literacy.',
     icon: (
       <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-        <path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+        <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
       </svg>
     ),
   },
   {
-    club: 'Entrepreneurship Club',
-    role: 'Vice President',
-    description: 'Organized startup pitch competitions and mentorship programs connecting students with founders. Grew club membership by 200% and secured partnerships with local accelerators.',
+    club: 'Monash DeepNeuron',
+    role: 'Industry Representative',
+    period: 'Mar 2024',
+    endPeriod: 'Mar 2025',
+    logo: '/images/MDN.jpeg',
+    description: 'Secured industry sponsorships and coordinated major events, including MCing a networking night featuring eight firms like Deloitte and Telstra. Facilitated 160+ student enrolments into industry programs through strategic stakeholder engagement.',
     icon: (
       <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-        <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
       </svg>
     ),
   },
   {
-    club: 'Hackathon Society',
-    role: 'Technical Lead',
-    description: 'Coordinated technical logistics for 24-hour hackathons with 200+ participants. Mentored teams on project development and judged final presentations.',
+    club: '180 Degrees Consulting',
+    role: 'Project Consultant',
+    period: 'Feb 2024',
+    endPeriod: 'Dec 2024',
+    logo: '/images/180DC.jpg',
+    description: 'Received the "Best Speaker" award for pro-bono consulting performance. Pitched and executed a digital transformation for a refugee support organisation, migrating their management operations to Monday.com to enhance operational efficiency.',
     icon: (
       <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-        <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+        <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
       </svg>
     ),
   },
   {
-    club: 'Design Collective',
-    role: 'Member',
-    description: 'Collaborated with designers and developers on creative projects. Participated in design sprints and contributed to open-source design systems.',
+    club: 'Monash Student Managed Fund',
+    role: 'Investment Analyst',
+    period: 'Jul 2023',
+    endPeriod: 'Feb 2024',
+    logo: '/images/MSMF.jpeg',
+    description: 'Conducted industrials sector equity research using trading comparables, PEST, and SWOT frameworks. Delivered a QAN equity report and pitch at MSMF Pitch Night, later validated by a Bloomberg 76.5% buy rating three months post-conclusion.',
     icon: (
       <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-        <path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+        <path d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
       </svg>
     ),
   },
@@ -80,7 +92,7 @@ export default function SocietiesSection() {
           </h2>
           <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
           <p className="text-center text-gray-400 mb-12 max-w-3xl mx-auto">
-            Leadership roles and contributions to campus organizations and communities.
+            Leadership roles and contributions to campus organisations and communities.
           </p>
         </motion.div>
 
@@ -94,17 +106,30 @@ export default function SocietiesSection() {
               className="group relative bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#e879f9]/20"
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-[#d946ef]/20 flex items-center justify-center text-blue-400 group-hover:text-[#e879f9] transition-colors border border-blue-500/30">
-                  {society.icon}
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-gray-700">
+                  {society.logo ? (
+                    <img 
+                      src={society.logo} 
+                      alt={`${society.club} logo`} 
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    society.icon
+                  )}
                 </div>
                 <div className="flex-1">
                   <div className="mb-2">
                     <h3 className="text-xl font-bold text-white mb-1">{society.club}</h3>
-                    <span className="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs font-semibold border border-blue-500/20">
-                      {society.role}
-                    </span>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="inline-block px-3 py-1 bg-[#d946ef]/10 text-[#d946ef] rounded-full text-xs font-semibold border border-[#d946ef]/20">
+                        {society.role}
+                      </span>
+                      <span className="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs font-semibold border border-blue-500/20">
+                        {society.period} - {society.endPeriod}
+                      </span>
+                    </div>
                   </div>
-                  <p className="text-gray-400 text-lg leading-relaxed">{society.description}</p>
+                  <p className="text-gray-400 text-base leading-relaxed">{society.description}</p>
                 </div>
               </div>
             </motion.div>
