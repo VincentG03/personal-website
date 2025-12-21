@@ -108,12 +108,12 @@ export default function ProjectsSection() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.72, delay: 0.24 + index * 0.12 }}
-              className="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#e879f9]/20"
+              onClick={() => setSelectedProject(project)}
+              className="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#e879f9]/20 cursor-pointer"
             >
               {/* Project Image */}
               <div 
-                className="relative h-48 w-full overflow-hidden cursor-pointer"
-                onClick={() => setSelectedProject(project)}
+                className="relative h-48 w-full overflow-hidden"
               >
                 <img 
                   src={project.image} 
@@ -144,7 +144,6 @@ export default function ProjectsSection() {
 
                 <div className="flex gap-4">
                   <button 
-                    onClick={() => setSelectedProject(project)}
                     className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     <svg className="w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -157,6 +156,7 @@ export default function ProjectsSection() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex items-center gap-2 text-[#e879f9] hover:text-[#f0abfc] transition-colors"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

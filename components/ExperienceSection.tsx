@@ -135,7 +135,7 @@ export default function ExperienceSection() {
             >
               {/* Single role company */}
               {exp.role && (
-                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-xl hover:shadow-[#e879f9]/15">
+                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300">
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Company Logo */}
                     <div className="flex-shrink-0">
@@ -199,7 +199,7 @@ export default function ExperienceSection() {
 
               {/* Multi-role company (promotions) */}
               {exp.roles && exp.roles.length > 0 && (
-                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-xl hover:shadow-[#e879f9]/15">
+                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300">
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Company Logo */}
                     <div className="flex-shrink-0">

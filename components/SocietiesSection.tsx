@@ -123,10 +123,7 @@ export default function SocietiesSection() {
           transition={{ duration: 1.152 }}
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center">
-            <span className="text-white">Extracurricular </span>
-            <span className="text-blue-400">
-              Leadership
-            </span>
+            <span className="text-blue-400">Extracurriculars</span>
           </h2>
           <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
           <p className="text-center text-gray-400 mb-12 max-w-3xl mx-auto">
@@ -141,7 +138,7 @@ export default function SocietiesSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.72, delay: 0.24 + index * 0.12 }}
-              className="group relative bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#e879f9]/20"
+              className="group relative bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300"
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-gray-700">
@@ -195,7 +192,7 @@ export default function SocietiesSection() {
                   initial={{ opacity: 0, x: 50 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.84 + index * 0.08 }}
-                  className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#e879f9]/15 w-[280px] flex-shrink-0"
+                  className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 w-[280px] flex-shrink-0"
                 >
                   <h4 className="text-lg font-bold text-white mb-4 min-h-[56px] leading-tight">
                     {competition.title}
