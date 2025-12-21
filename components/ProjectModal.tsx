@@ -95,7 +95,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                 <div className="space-y-6 text-gray-300">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3">Overview</h3>
-                    <p className="leading-relaxed">{project.description}</p>
+                    <p className="leading-relaxed">{project.description || 'Project details coming soon...'}</p>
                   </div>
 
                   <div>
@@ -105,25 +105,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                         <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                           <path d="M5 13l4 4L19 7"></path>
                         </svg>
-                        <span>Responsive design optimized for all devices and screen sizes</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                          <path d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span>Modern UI with smooth animations and transitions</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                          <path d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span>Robust backend API with comprehensive error handling</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                          <path d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span>Secure authentication and authorization system</span>
+                        <span>Details coming soon...</span>
                       </li>
                     </ul>
                   </div>
@@ -131,18 +113,14 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3">Technical Implementation</h3>
                     <p className="leading-relaxed">
-                      This project showcases modern development practices including component-based architecture,
-                      state management, API integration, and performance optimization. Built with scalability
-                      and maintainability in mind, featuring comprehensive testing and documentation.
+                      Details coming soon...
                     </p>
                   </div>
 
                   <div>
                     <h3 className="text-xl font-bold text-white mb-3">Challenges & Solutions</h3>
                     <p className="leading-relaxed">
-                      Overcame complex technical challenges including optimizing database queries for large datasets,
-                      implementing real-time features with WebSockets, and ensuring cross-browser compatibility.
-                      Applied design patterns and best practices to create a robust and efficient solution.
+                      Details coming soon...
                     </p>
                   </div>
                 </div>

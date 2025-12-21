@@ -8,32 +8,32 @@ import ProjectModal from './ProjectModal';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+    title: 'Sports Betting Arbitrage Program',
+    description: '',
+    tech: [],
     gradient: 'from-blue-500 to-cyan-500',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80',
   },
   {
-    title: 'AI Content Generator',
-    description: 'An AI-powered tool that generates high-quality content using natural language processing and machine learning.',
-    tech: ['Python', 'TensorFlow', 'FastAPI', 'React'],
+    title: 'Victorian Housing Analysis (WIP)',
+    description: '',
+    tech: [],
     gradient: 'from-purple-500 to-pink-500',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80',
   },
   {
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates, team features, and analytics dashboard.',
-    tech: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind'],
+    title: 'Data Science Handbook',
+    description: '',
+    tech: [],
     gradient: 'from-green-500 to-emerald-500',
-    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
   },
   {
-    title: 'Analytics Dashboard',
-    description: 'A comprehensive analytics platform with customizable widgets, data visualization, and reporting capabilities.',
-    tech: ['React', 'D3.js', 'Express', 'MongoDB'],
+    title: 'My Finance Hub (WIP)',
+    description: '',
+    tech: [],
     gradient: 'from-orange-500 to-red-500',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
   },
 ];
 
