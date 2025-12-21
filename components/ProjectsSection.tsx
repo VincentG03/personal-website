@@ -8,6 +8,23 @@ import ProjectModal from './ProjectModal';
 
 const projects = [
   {
+    title: 'Data Science Handbook',
+    description: 'A comprehensive Jupyter Notebook reference guide for essential data science operations in Python, featuring detailed syntax examples and practical applications using Pandas, Matplotlib, and SQL.',
+    tech: ['Python', 'Pandas', 'Matplotlib', 'SQL'],
+    gradient: 'from-green-500 to-emerald-500',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    features: [
+      'Complete Pandas reference covering data import/export, exploration, manipulation, and transformation',
+      'Matplotlib visualisation examples including scatter plots, histograms, bar charts, and heatmaps',
+      'SQL syntax guide for queries, joins, aggregations, and string/date manipulation',
+      'Practical examples using the Titanic dataset demonstrating real-world data analysis workflows',
+      'Organised reference structure with clear explanations and usage examples for each function'
+    ],
+    implementation: 'Built as interactive Jupyter Notebooks (.ipynb) providing hands-on examples with the Titanic dataset from Kaggle. The handbook covers comprehensive Pandas operations from data import (read_csv, read_json, read_table) through exploration (head, tail, describe, info), missing data handling (dropna, fillna), data selection (loc, iloc), transformation (apply, replace, melt), sorting, merging, grouping, and string/date manipulation. Matplotlib section demonstrates various visualisation types with clear use cases. SQL section provides syntax reference for querying, joins, aggregations, and data manipulation.',
+    challenges: 'The main challenge was structuring a comprehensive reference that balances breadth and depth while remaining accessible. Organised content into logical sections (importing, exploration, missing data, selection, transformation, etc.) with consistent formatting. Each method includes purpose, parameters, and usage examples. Used the Titanic dataset throughout to provide continuity and practical context. Kept examples concise while demonstrating key functionality, making it easy to find and apply specific syntax when needed.',
+    githubUrl: 'https://github.com/VincentG03/Data-Science-Syntax'
+  },
+  {
     title: 'Sports Betting Arbitrage Program',
     description: 'A Python program that identifies arbitrage opportunities in sports betting markets by analysing real-time odds across multiple bookmakers and calculating optimal bet amounts to guarantee profit.',
     tech: ['Python', 'Pandas', 'The Odds API'],
@@ -25,21 +42,14 @@ const projects = [
     githubUrl: 'https://github.com/VincentG03/Sports-Betting-Arbitrage-Program'
   },
   {
-    title: 'Victorian Housing Analysis (WIP)',
+    title: 'Victorian Housing Analysis (Coming Soon)',
     description: '',
     tech: [],
     gradient: 'from-purple-500 to-pink-500',
     image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80',
   },
   {
-    title: 'Data Science Handbook',
-    description: '',
-    tech: [],
-    gradient: 'from-green-500 to-emerald-500',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-  },
-  {
-    title: 'My Finance Hub (WIP)',
+    title: 'My Finance Hub (Coming Soon)',
     description: '',
     tech: [],
     gradient: 'from-orange-500 to-red-500',
