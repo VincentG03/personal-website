@@ -60,6 +60,44 @@ const societies = [
   },
 ];
 
+const competitions = [
+  {
+    title: 'Global Case Competition 2024',
+    date: 'Oct 2024',
+    position: '1st Place',
+  },
+  {
+    title: 'National Coding Challenge',
+    date: 'Jun 2024',
+    position: 'Semi-Finalist',
+  },
+  {
+    title: 'Business Strategy Case Study',
+    date: 'Mar 2024',
+    position: 'Top 10',
+  },
+  {
+    title: 'Data Science Hackathon',
+    date: 'Sep 2024',
+    position: '2nd Place',
+  },
+  {
+    title: 'Finance Case Competition',
+    date: 'Jul 2024',
+    position: 'Finalist',
+  },
+  {
+    title: 'Innovation Challenge',
+    date: 'May 2024',
+    position: '3rd Place',
+  },
+  {
+    title: 'Investment Pitch Competition',
+    date: 'Apr 2024',
+    position: 'Winner',
+  },
+];
+
 export default function SocietiesSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '0px' });
@@ -85,14 +123,14 @@ export default function SocietiesSection() {
           transition={{ duration: 1.152 }}
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center">
-            <span className="text-white">Student </span>
+            <span className="text-white">Extracurricular </span>
             <span className="text-blue-400">
-              Societies
+              Leadership
             </span>
           </h2>
           <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
           <p className="text-center text-gray-400 mb-12 max-w-3xl mx-auto">
-            Leadership roles and contributions to campus organisations and communities.
+            Leadership roles and competition achievements across campus organisations.
           </p>
         </motion.div>
 
@@ -135,6 +173,42 @@ export default function SocietiesSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Competitions Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.72, delay: 0.72 }}
+          className="mt-16"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            <span className="text-white">Competition </span>
+            <span className="text-blue-400">Achievements</span>
+          </h3>
+          
+          {/* Scrollable container */}
+          <div className="relative overflow-x-auto pb-4 scrollbar-custom">
+            <div className="flex gap-6 min-w-max">
+              {competitions.map((competition, index) => (
+                <motion.div
+                  key={competition.title}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.84 + index * 0.08 }}
+                  className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#e879f9]/15 text-center w-[280px] flex-shrink-0"
+                >
+                  <h4 className="text-xl font-bold text-white mb-3">{competition.title}</h4>
+                  <span className="inline-block px-3 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-semibold border border-blue-500/20 mb-4">
+                    {competition.date}
+                  </span>
+                  <div className="text-2xl font-bold text-[#d946ef] mt-2">
+                    {competition.position}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
         
         {/* Green box to highlight spacing at bottom - invisible but spacing preserved */}
         <div className="h-[3.75rem] pointer-events-none mt-8" />

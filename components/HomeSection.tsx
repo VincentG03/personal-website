@@ -60,16 +60,8 @@ export default function HomeSection() {
           <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
             {/* Placeholder for portrait image */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-[#d946ef] opacity-20 blur-2xl animate-pulse-slow" />
-            <div className="relative w-full h-full rounded-full border-4 border-blue-500/30 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-              {/* Replace this div with your image:
-                  <img src="/your-portrait.jpg" alt="Vincent Giang" className="w-full h-full object-cover" />
-              */}
-              <div className="text-center">
-                <svg className="w-32 h-32 text-blue-400/30 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
-                <p className="text-xs text-gray-500 mt-2">Add your portrait here</p>
-              </div>
+            <div className="relative w-full h-full rounded-full border-4 border-blue-500/30 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
+              <img src="/images/Vincent Photo.png" alt="Vincent Giang" className="w-full h-full object-cover" />
             </div>
           </div>
         </motion.div>
