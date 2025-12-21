@@ -62,39 +62,39 @@ const societies = [
 
 const competitions = [
   {
-    title: 'Global Case Competition 2024',
-    date: 'Oct 2024',
-    position: '1st Place',
+    title: 'Monash Business Case Competition',
+    date: 'Nov 2024',
+    position: '2nd',
   },
   {
-    title: 'National Coding Challenge',
+    title: 'Trans-Tasman Case Competition',
+    date: 'Oct 2024',
+    position: '2nd',
+  },
+  {
+    title: 'The Trading Invitational',
     date: 'Jun 2024',
+    position: '1st',
+  },
+  {
+    title: 'IMC Prosperity',
+    date: 'Mar 2024',
+    position: 'Top 2%',
+  },
+  {
+    title: 'ACYA National Case Competition',
+    date: 'Feb 2024',
     position: 'Semi-Finalist',
   },
   {
-    title: 'Business Strategy Case Study',
-    date: 'Mar 2024',
-    position: 'Top 10',
+    title: 'IMC Algorithmic Trading Competition',
+    date: 'Mar 2023',
+    position: '3rd',
   },
   {
-    title: 'Data Science Hackathon',
-    date: 'Sep 2024',
-    position: '2nd Place',
-  },
-  {
-    title: 'Finance Case Competition',
-    date: 'Jul 2024',
-    position: 'Finalist',
-  },
-  {
-    title: 'Innovation Challenge',
-    date: 'May 2024',
-    position: '3rd Place',
-  },
-  {
-    title: 'Investment Pitch Competition',
-    date: 'Apr 2024',
-    position: 'Winner',
+    title: 'Hacayathon Case Competition',
+    date: 'May 2022',
+    position: '1st',
   },
 ];
 
@@ -195,14 +195,18 @@ export default function SocietiesSection() {
                   initial={{ opacity: 0, x: 50 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.84 + index * 0.08 }}
-                  className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#e879f9]/15 text-center w-[280px] flex-shrink-0"
+                  className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-lg hover:shadow-[#e879f9]/15 w-[280px] flex-shrink-0"
                 >
-                  <h4 className="text-xl font-bold text-white mb-3">{competition.title}</h4>
-                  <span className="inline-block px-3 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-semibold border border-blue-500/20 mb-4">
-                    {competition.date}
-                  </span>
-                  <div className="text-2xl font-bold text-[#d946ef] mt-2">
-                    {competition.position}
+                  <h4 className="text-lg font-bold text-white mb-4 min-h-[56px] leading-tight">
+                    {competition.title}
+                  </h4>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-block px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-semibold border border-emerald-500/20">
+                      {competition.position}
+                    </span>
+                    <span className="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm font-semibold border border-blue-500/20">
+                      {competition.date}
+                    </span>
                   </div>
                 </motion.div>
               ))}

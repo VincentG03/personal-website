@@ -18,6 +18,7 @@ const experiences = [
       'Owned the full delivery lifecycle for the MHB initiative, from discovery through to delivery, and post release maintenance, with the feature reaching thousands of customers within three weeks, including 479 active users across 20 plus airports.',
       'Contributed to the delivery of 4 initiatives over the internship by translating business requirements into clear user stories, acceptance criteria and functional documentation, authoring and actively contributing to 60+ Jira tickets during my internship.',
     ],
+    tech: ['Jira', 'Confluence', 'Miro'],
   },
   {
     role: 'Data and Analytics Intern',
@@ -31,6 +32,7 @@ const experiences = [
       'Automated project data collection for 5 project managers across 15+ projects using Power Automate, streamlining email table data extraction and trigger-based workflows to ensure seamless monthly reporting.',
       'Pitched a comprehensive vertical infrastructure strategy to judges on transforming the upcoming SRL East Monash University station into a vibrant precinct beyond just a transportation hub and won the "State Government Award".',
     ],
+    tech: ['Python', 'Power Automate', 'Excel', 'PowerBI'],
   },
   {
     role: 'Treasury and Capital Markets Intern',
@@ -44,6 +46,7 @@ const experiences = [
       'Conducted fair value and rTSR calculations for share-based payment contracts using Excel models and Deloitte\'s SBP tool to support financial reporting for ASX100 clients.',
       'Built a custom financial model to value a reward and incentive plan, providing analysts with a baseline tool that significantly improved efficiency by saving time.',
     ],
+    tech: ['Excel', 'Bloomberg'],
   },
   {
     company: 'Artin Education',
@@ -59,6 +62,7 @@ const experiences = [
           'Managed an 8 member team, ensuring key milestones were achieved and projects were delivered in a timely manner.',
           'Led the creation of topic tests and term tests for all classes, ensuring comprehensive assessment coverage.',
         ],
+        tech: ['LaTeX', 'Microsoft Word'],
       },
       {
         role: 'Team Leader',
@@ -164,7 +168,7 @@ export default function ExperienceSection() {
                       
                       <p className="text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
                       
-                      <div className="grid md:grid-cols-1 gap-3">
+                      <div className="grid md:grid-cols-1 gap-3 mb-4">
                         {exp.highlights?.map((highlight) => (
                           <div key={highlight} className="flex items-start gap-2">
                             <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -174,6 +178,20 @@ export default function ExperienceSection() {
                           </div>
                         ))}
                       </div>
+
+                      {/* Tech Stack */}
+                      {exp.tech && (
+                        <div className="flex flex-wrap gap-2 mt-4">
+                          {exp.tech.map((technology) => (
+                            <span
+                              key={technology}
+                              className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm font-medium border border-gray-700"
+                            >
+                              {technology}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -215,7 +233,7 @@ export default function ExperienceSection() {
                       
                       <p className="text-gray-300 mb-4 leading-relaxed">{exp.roles[0].description}</p>
                       
-                      <div className="grid md:grid-cols-1 gap-3 mb-6">
+                      <div className="grid md:grid-cols-1 gap-3 mb-4">
                         {exp.roles[0].highlights?.map((highlight) => (
                           <div key={highlight} className="flex items-start gap-2">
                             <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -225,6 +243,20 @@ export default function ExperienceSection() {
                           </div>
                         ))}
                       </div>
+
+                      {/* Tech Stack */}
+                      {exp.roles[0].tech && (
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {exp.roles[0].tech.map((technology) => (
+                            <span
+                              key={technology}
+                              className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm font-medium border border-gray-700"
+                            >
+                              {technology}
+                            </span>
+                          ))}
+                        </div>
+                      )}
 
                       {/* Previous roles - shown below with left border */}
                       {exp.roles.length > 1 && (

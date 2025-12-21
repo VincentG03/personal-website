@@ -58,8 +58,9 @@ export default function HomeSection() {
           transition={{ duration: 1.3824, delay: 0.3456 }}
         >
           <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
-            {/* Placeholder for portrait image */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-[#d946ef] opacity-20 blur-2xl animate-pulse-slow" />
+            {/* Enhanced glow effect */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-[#d946ef] opacity-60 blur-[80px] animate-pulse-slow" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400 to-[#e879f9] opacity-50 blur-[60px]" />
             <div className="relative w-full h-full rounded-full border-4 border-blue-500/30 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
               <img src="/images/Vincent Photo.png" alt="Vincent Giang" className="w-full h-full object-cover" />
             </div>
