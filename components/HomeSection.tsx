@@ -94,7 +94,7 @@ export default function HomeSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.3824, delay: 0.6912 }}
           >
-            Developer • Creator • Problem Solver
+            Curious • Problem Solver • Impact-Oriented
           </motion.p>
 
           <motion.p
@@ -103,8 +103,8 @@ export default function HomeSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.3824, delay: 0.864 }}
           >
-            Turning coffee into code and ideas into reality. 
-            I build things that make people&apos;s lives easier, one pixel at a time. 🚀
+            Fueled by coffee and driven by curiosity, I use data to solve meaningful problems 
+            and deliver measurable impact. 🚀
           </motion.p>
 
           <motion.div

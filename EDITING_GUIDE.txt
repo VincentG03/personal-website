@@ -1,0 +1,446 @@
+================================================================================
+                    WEBSITE EDITING GUIDE - PLAIN TEXT VERSION
+================================================================================
+
+This guide shows you exactly where and how to change all text and images on
+your personal website. Each section tells you the file location and line
+numbers to edit.
+
+
+================================================================================
+                             SECTION 1: HOME PAGE
+================================================================================
+
+FILE: components/HomeSection.tsx
+
+YOUR NAME (Line 87):
+--------------------
+Find: <span className="text-blue-400">
+        Vincent Giang
+      </span>
+
+Change "Vincent Giang" to your name.
+
+
+SUBTITLE (Line 95):
+-------------------
+Find: Developer • Creator • Problem Solver
+
+Change this to your own subtitle/role.
+
+
+DESCRIPTION PARAGRAPH (Line 104):
+----------------------------------
+Find: Turning coffee into code and ideas into reality.
+      I build things that make people's lives easier, one pixel at a time. 🚀
+
+Change this entire paragraph to your own description.
+
+
+PORTRAIT IMAGE (Lines 62-68):
+------------------------------
+Find this section with the placeholder:
+      <div className="text-center">
+        <svg className="w-32 h-32 text-blue-400/30 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+        </svg>
+        <p className="text-xs text-gray-500 mt-2">Add your portrait here</p>
+      </div>
+
+REPLACE THE ENTIRE SECTION ABOVE WITH:
+      <img src="/your-portrait.jpg" alt="Your Name" className="w-full h-full object-cover" />
+
+NOTE: Place your portrait image in the "public" folder at the root of the
+      project and name it "your-portrait.jpg" (or use your preferred name
+      and update the src="/your-portrait.jpg" accordingly).
+
+
+RESUME LINK (Line 113):
+-----------------------
+Find: href="/resume.pdf"
+      download="Vincent_Giang_Resume.pdf"
+
+1. Place your resume PDF file in the "public" folder
+2. Update href="/resume.pdf" to match your filename
+3. Change download="Vincent_Giang_Resume.pdf" to your preferred download name
+
+
+================================================================================
+                           SECTION 2: ABOUT ME
+================================================================================
+
+FILE: components/AboutSection.tsx
+
+ABOUT ME TITLE (Line 74):
+-------------------------
+The word "Me" in the title is at line 76. You can change it but typically
+you keep "About" and "Me" as is.
+
+
+DESCRIPTION PARAGRAPHS (Lines 78-82):
+--------------------------------------
+Paragraph 1:
+Find: I'm a passionate developer who loves crafting elegant solutions to
+      complex problems. With a strong foundation in both frontend and
+      backend technologies, I specialize in building scalable applications
+      that make a difference.
+
+Change to your own introduction.
+
+Paragraph 2:
+Find: Bachelor of Computer Science graduate from Monash University with
+      a focus on software engineering and full-stack development.
+
+Change to your education background.
+
+
+SKILLS SECTION (Lines 7-44):
+-----------------------------
+There are 4 skill cards. Each has:
+  - title: The skill name
+  - description: What you do with this skill
+  - icon: SVG graphic (you can keep as is or replace)
+
+To change a skill:
+1. Find the skill object (e.g., 'Full Stack Development')
+2. Change the title property
+3. Change the description property
+
+Example at Line 9:
+  {
+    title: 'Full Stack Development',
+    description: 'Experienced in building modern web applications with React, Node.js, and various databases.',
+
+Change both title and description to your own skill.
+
+Repeat for all 4 skills (lines 9-16, 17-24, 25-32, 33-40).
+
+
+================================================================================
+                         SECTION 3: WORK EXPERIENCE
+================================================================================
+
+FILE: components/ExperienceSection.tsx
+
+Each job experience is an object in the "experiences" array starting at line 8.
+
+There are 3 types of experience entries:
+  A) Single role at a company
+  B) Multiple roles at same company (promotions)
+  C) Single role at another company
+
+
+EXPERIENCE FORMAT A - SINGLE ROLE (Lines 8-25):
+------------------------------------------------
+Find:
+  {
+    role: 'Senior Software Engineer',
+    company: 'Tech Innovations Inc.',
+    period: 'Jan 2022',
+    endPeriod: 'Present',
+    logo: '/logos/tech-innovations.png',
+    description: 'Leading development of cloud-native applications...',
+    highlights: [
+      'Reduced application load time by 60%...',
+      'Led and mentored a team of 5 engineers...',
+      'Implemented comprehensive CI/CD pipeline...',
+    ],
+  },
+
+TO CHANGE:
+- role: Your job title
+- company: Company name
+- period: Start date
+- endPeriod: End date or "Present"
+- description: Brief role description
+- highlights: Array of achievements (add or remove bullet points as needed)
+
+
+EXPERIENCE FORMAT B - MULTIPLE ROLES (Lines 26-73):
+----------------------------------------------------
+Used when you had promotions at the same company.
+
+Find:
+  {
+    company: 'Growth Startup LLC',
+    roles: [
+      {
+        role: 'Engineering Manager',
+        period: 'Jun 2021',
+        endPeriod: 'Dec 2021',
+        description: '...',
+        highlights: [...]
+      },
+      {
+        role: 'Senior Developer',
+        ...
+      },
+    ],
+  },
+
+TO CHANGE:
+- company: Company name
+- For each role inside roles array, update:
+  - role: Job title
+  - period: Start date
+  - endPeriod: End date
+  - description: What you did
+  - highlights: Achievements
+
+
+EXPERIENCE FORMAT C - ANOTHER SINGLE ROLE (Lines 74-85):
+---------------------------------------------------------
+Same as Format A above.
+
+
+TO ADD NEW EXPERIENCE:
+Copy an existing experience object (with all its properties) and paste it
+into the array, then modify all the fields.
+
+TO REMOVE EXPERIENCE:
+Delete the entire object from the array, including the opening { and
+closing }, and the comma after it.
+
+
+================================================================================
+                        SECTION 4: STUDENT SOCIETIES
+================================================================================
+
+FILE: components/SocietiesSection.tsx
+
+Each society is an object in the "societies" array starting at line 8.
+
+
+SOCIETY ENTRY (Lines 8-16):
+----------------------------
+Find:
+  {
+    club: 'Computer Science Society',
+    role: 'President',
+    description: 'Led the largest technical society on campus...',
+    icon: (svg code here),
+  },
+
+TO CHANGE:
+- club: Society/organization name
+- role: Your role/position
+- description: What you did and achieved
+- icon: Keep as is or replace with different SVG icon
+
+Repeat for all societies (there are 4 by default).
+
+TO ADD NEW SOCIETY:
+Copy an entire society object and paste it in the array, then modify.
+
+TO REMOVE SOCIETY:
+Delete the entire object including its comma.
+
+
+================================================================================
+                            SECTION 5: PROJECTS
+================================================================================
+
+FILE: components/ProjectsSection.tsx
+
+Each project is an object in the "projects" array starting at line 8.
+
+
+PROJECT ENTRY (Lines 8-15):
+----------------------------
+Find:
+  {
+    title: 'E-Commerce Platform',
+    description: 'A full-stack e-commerce solution with real-time inventory...',
+    tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+    gradient: 'from-blue-500 to-cyan-500',
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
+  },
+
+TO CHANGE:
+- title: Project name
+- description: Project description
+- tech: Array of technologies used - add or remove items
+- gradient: Keep as is (it's a color scheme)
+- image: URL to project screenshot or image
+
+TO USE YOUR OWN PROJECT IMAGE:
+1. Place image in "public/projects/" folder
+2. Change image: '/projects/your-image.jpg'
+
+Repeat for all 4 projects.
+
+TO ADD NEW PROJECT:
+Copy an entire project object, paste in array, and modify.
+
+TO REMOVE PROJECT:
+Delete the entire object including its comma.
+
+
+================================================================================
+                        SECTION 6: FOOTER / SOCIAL LINKS
+================================================================================
+
+FILE: components/Footer.tsx
+
+LINKEDIN LINK (Line 23):
+------------------------
+Find: href="https://www.linkedin.com/in/vincentgiang/"
+
+Change "vincentgiang" to your LinkedIn username.
+
+
+GITHUB LINK (Line 37):
+----------------------
+Find: href="https://github.com/VincentG03"
+
+Change "VincentG03" to your GitHub username.
+
+
+FOOTER MESSAGE (Line 19):
+--------------------------
+Find: <h3 className="text-xl font-bold text-white mb-6">Let's Connect!</h3>
+
+Change "Let's Connect!" to your preferred message.
+
+
+TO ADD MORE SOCIAL LINKS:
+Copy one of the existing social link blocks (lines 22-35 or 37-50) and
+paste below, then change:
+- The href URL
+- The SVG icon (find icons at heroicons.com or use any SVG)
+- The label text
+
+
+================================================================================
+                         SECTION 7: WEBSITE METADATA
+================================================================================
+
+FILE: app/layout.tsx
+
+WEBSITE TITLE (Line 6):
+-----------------------
+Find: title: "Vincent Giang - Personal Website",
+
+Change to your name and title.
+
+
+WEBSITE DESCRIPTION (Line 7):
+------------------------------
+Find: description: "Personal website showcasing my work, experience, and projects",
+
+Change to your own description. This appears in Google search results.
+
+
+================================================================================
+                             SECTION 8: NAVBAR
+================================================================================
+
+FILE: components/Navbar.tsx
+
+The navbar sections are defined at lines 6-12:
+
+NAVBAR ITEMS (Lines 6-12):
+--------------------------
+Find:
+  { name: 'Home', href: '#home' },
+  { name: 'About Me', href: '#about' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Societies', href: '#societies' },
+  { name: 'Projects', href: '#projects' },
+
+TO CHANGE:
+- name: Display text in navbar
+- href: Section ID (must match section IDs in your components)
+
+TO ADD NEW NAVBAR ITEM:
+1. Add new line: { name: 'New Section', href: '#newsection' },
+2. Make sure you have a section with id="newsection" in your page
+
+
+================================================================================
+                         SECTION 9: COLOR SCHEME
+================================================================================
+
+The website uses these main colors:
+  - Blue: #3b82f6 (blue-400/blue-500)
+  - Light Magenta: #e879f9 
+  - Magenta: #d946ef
+  - White: #ffffff
+  - Dark Background: #050b15, #0a1220, #0d1a30
+
+To change colors site-wide, search for these hex codes or Tailwind classes
+in all component files and replace them with your preferred colors.
+
+Main files with colors:
+  - components/HomeSection.tsx
+  - components/AboutSection.tsx
+  - components/ExperienceSection.tsx
+  - components/SocietiesSection.tsx
+  - components/ProjectsSection.tsx
+  - components/Footer.tsx
+
+
+================================================================================
+                             TIPS AND NOTES
+================================================================================
+
+1. LINE NUMBERS: Line numbers may shift as you edit. Use the "Find" text
+   to locate the exact section.
+
+2. BACKUP: Always save a backup copy before making changes.
+
+3. TESTING: After changes, run "npm run dev" to preview locally at
+   http://localhost:3000
+
+4. IMAGES: All images referenced as "/image.jpg" should be placed in the
+   "public" folder at project root.
+
+5. SPECIAL CHARACTERS: If you need apostrophes in text, use &apos; instead
+   of ' to avoid errors (e.g., "Let&apos;s Connect" instead of "Let's Connect").
+
+6. ARRAYS: When editing arrays (like skills, projects, experiences), always
+   maintain proper commas between items. Last item should NOT have a comma.
+
+7. DELETING SECTIONS: If you want to remove an entire section (like Societies),
+   you need to:
+   - Remove it from app/page.tsx (the import and component)
+   - Remove it from the navbar in components/Navbar.tsx
+
+
+================================================================================
+                              QUICK REFERENCE
+================================================================================
+
+FILE STRUCTURE:
+---------------
+app/
+  layout.tsx          - Website metadata (title, description)
+  page.tsx            - Main page structure
+
+components/
+  HomeSection.tsx     - First page with name and portrait
+  AboutSection.tsx    - About me and skills
+  ExperienceSection.tsx - Work experience
+  SocietiesSection.tsx - Student societies/organizations  
+  ProjectsSection.tsx - Project portfolio
+  Footer.tsx          - Social links at bottom
+  Navbar.tsx          - Navigation menu at top
+
+public/
+  (place all images here) - resume.pdf, portrait images, project images
+
+
+COMMON TASKS:
+-------------
+Change name:              components/HomeSection.tsx, Line 87
+Change portrait:          components/HomeSection.tsx, Lines 62-68
+Change about text:        components/AboutSection.tsx, Lines 78-82
+Add work experience:      components/ExperienceSection.tsx, Line 8+
+Add project:              components/ProjectsSection.tsx, Line 8+
+Change social links:      components/Footer.tsx, Lines 23 & 37
+Change page title:        app/layout.tsx, Line 6
+
+
+================================================================================
+                              END OF GUIDE
+================================================================================

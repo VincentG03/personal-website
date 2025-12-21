@@ -7,69 +7,80 @@ import ParticleBackground from './ParticleBackground';
 
 const experiences = [
   {
-    role: 'Senior Software Engineer',
-    company: 'Tech Innovations Inc.',
-    period: 'Jan 2022',
-    endPeriod: 'Present',
-    logo: '/logos/tech-innovations.png',
-    description: 'Leading development of cloud-native applications and mentoring junior developers. Architected scalable solutions serving millions of users.',
+    role: 'Business Analyst Intern',
+    company: 'Jetstar',
+    period: 'Jun 2025',
+    endPeriod: 'Nov 2025',
+    logo: '/images/Jetstar.jpeg',
+    description: 'Coordinated cross-functional teams and translated business requirements into technical solutions for digital initiatives.',
     highlights: [
-      'Reduced application load time by 60% through implementing advanced caching strategies and optimizing database queries across microservices architecture',
-      'Led and mentored a team of 5 engineers, conducting code reviews and establishing best practices that improved code quality metrics by 40%',
-      'Implemented comprehensive CI/CD pipeline using GitHub Actions and Docker, reducing deployment time from hours to minutes while maintaining 99.9% uptime',
+      'Led the end to end delivery of the Mishandled Baggage (MHB) digital initiative, introducing an in app reporting pathway within the Jetstar mobile app and coordinating work across designers, content writers and multiple development teams.',
+      'Owned the full delivery lifecycle for the MHB initiative, from discovery through to delivery, and post release maintenance, with the feature reaching thousands of customers within three weeks, including 479 active users across 20 plus airports.',
+      'Contributed to the delivery of 4 initiatives over the internship by translating business requirements into clear user stories, acceptance criteria and functional documentation, authoring and actively contributing to 60+ Jira tickets during my internship.',
     ],
   },
   {
-    company: 'Growth Startup LLC',
+    role: 'Data and Analytics Intern',
+    company: 'Aurecon',
+    period: 'Nov 2024',
+    endPeriod: 'Feb 2025',
+    logo: '/images/Aurecon.webp',
+    description: 'Automated data workflows and developed analytics solutions to improve operational efficiency across projects.',
+    highlights: [
+      'Developed Python scripts (pandas, numpy, regex, re, openpyxl, os) to automate the extraction and transformation of ~260 Excel spreadsheets for a transport company, enabling SMEs to consolidate the data into a single CSV file for importing into an IRMS.',
+      'Automated project data collection for 5 project managers across 15+ projects using Power Automate, streamlining email table data extraction and trigger-based workflows to ensure seamless monthly reporting.',
+      'Pitched a comprehensive vertical infrastructure strategy to judges on transforming the upcoming SRL East Monash University station into a vibrant precinct beyond just a transportation hub and won the "State Government Award".',
+    ],
+  },
+  {
+    role: 'Treasury and Capital Markets Intern',
+    company: 'Deloitte',
+    period: 'June 2024',
+    endPeriod: 'Jul 2024',
+    logo: '/images/Deloitte.jpg',
+    description: 'Supported financial analysis and valuation projects for ASX-listed clients, developing models and conducting technical assessments.',
+    highlights: [
+      'Updated the credit rating model to align with Moody\'s 2024 updates, improving accuracy for analysts who utilise it across 80+ ASX200 clients annually for credit rating and rTSR analysis.',
+      'Conducted fair value and rTSR calculations for share-based payment contracts using Excel models and Deloitte\'s SBP tool to support financial reporting for ASX100 clients.',
+      'Built a custom financial model to value a reward and incentive plan, providing analysts with a baseline tool that significantly improved efficiency by saving time.',
+    ],
+  },
+  {
+    company: 'Artin Education',
     roles: [
       {
-        role: 'Engineering Manager',
-        period: 'Jun 2021',
-        endPeriod: 'Dec 2021',
-        description: 'Promoted to lead the engineering team. Managed technical roadmap and team growth.',
+        role: 'Mathematics Tutor',
+        period: 'Feb 2023',
+        endPeriod: 'Jan 2025',
+        description: 'Delivered high-quality mathematics education.',
+        showDescription: true,
         highlights: [
-          'Grew engineering team from 3 to 10 members by developing comprehensive hiring process and conducting 50+ technical interviews',
-          'Established code review process and quality standards that reduced production bugs by 65% while accelerating feature delivery',
-          'Increased team velocity by 40% through implementing agile methodologies and removing process bottlenecks',
+          'Expanded class sizes from 12 to 25+ students by conducting initial consultations and assessments, achieving a 90% enrolment rate and 100% term-to-term retention through proactive relationship management.',
+          'Managed an 8 member team, ensuring key milestones were achieved and projects were delivered in a timely manner.',
+          'Led the creation of topic tests and term tests for all classes, ensuring comprehensive assessment coverage.',
         ],
       },
       {
-        role: 'Senior Developer',
-        period: 'Mar 2020',
-        endPeriod: 'May 2021',
-        description: 'Led key feature development and mentored junior developers.',
+        role: 'Team Leader',
+        period: 'Nov 2022',
+        endPeriod: 'Apr 2023',
+        description: 'Coordinated team operations and supervised educational program delivery.',
         highlights: [
-          'Shipped 5 major features including real-time collaboration tools and advanced search functionality that increased user engagement by 35%',
-          'Mentored 3 junior developers through pair programming sessions and weekly knowledge sharing, accelerating their growth to mid-level positions',
-          'Improved test coverage from 45% to 85% by implementing automated testing strategies and training team on TDD practices',
+          'Contributed to 110 plus individual content documents, supporting the completion of the Year 9, Year 10 and VCE General Mathematics curriculum.',
         ],
       },
       {
-        role: 'Software Developer',
-        period: 'Jan 2019',
-        endPeriod: 'Feb 2020',
-        description: 'Contributed to core product development and infrastructure improvements.',
+        role: 'Administrative Officer',
+        period: 'Dec 2021',
+        endPeriod: 'Nov 2022',
+        description: 'Managed administrative functions.',
+        showDescription: false,
         highlights: [
-          'Built secure authentication system with OAuth2 and JWT supporting 100k+ users with zero security incidents',
-          'Optimized complex database queries and implemented proper indexing strategies, reducing average API latency by 50% across all endpoints',
-          'Reduced API response times from 800ms to 400ms by refactoring inefficient code and implementing Redis caching layer',
+          'Collaborated within the Materials Development team to create tutorial notes, homework questions, bound reference material and revision content for Year 7 to VCE Mathematics.',
         ],
       },
     ],
-    logo: '/logos/growth-startup.png',
-  },
-  {
-    role: 'Full Stack Developer',
-    company: 'Digital Solutions Co.',
-    period: 'Jun 2017',
-    endPeriod: 'Dec 2018',
-    logo: '/logos/digital-solutions.png',
-    description: 'Developed and maintained multiple client-facing web applications using modern JavaScript frameworks and cloud services.',
-    highlights: [
-      'Built and deployed 10+ production applications using React, Node.js, and AWS, serving over 50,000 daily active users',
-      'Improved code quality metrics by implementing ESLint, Prettier, and comprehensive unit testing resulting in 70% fewer production bugs',
-      'Integrated Stripe payment processing system handling $2M+ in annual transactions with PCI compliance and fraud detection',
-    ],
+    logo: '/images/Artin.jpeg',
   },
 ];
 
@@ -124,10 +135,18 @@ export default function ExperienceSection() {
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Company Logo */}
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-gradient-to-br from-blue-500/20 to-[#d946ef]/20 border border-gray-700 flex items-center justify-center overflow-hidden">
-                        <svg className="w-12 h-12 text-blue-400/40" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd" />
-                        </svg>
+                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-white border border-gray-700 flex items-center justify-center overflow-hidden p-2">
+                        {exp.logo ? (
+                          <img 
+                            src={exp.logo} 
+                            alt={`${exp.company} logo`} 
+                            className="w-full h-full object-contain"
+                          />
+                        ) : (
+                          <svg className="w-12 h-12 text-blue-400/40" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd" />
+                          </svg>
+                        )}
                       </div>
                     </div>
 
@@ -161,54 +180,85 @@ export default function ExperienceSection() {
               )}
 
               {/* Multi-role company (promotions) */}
-              {exp.roles && (
+              {exp.roles && exp.roles.length > 0 && (
                 <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-gray-700 hover:border-[#e879f9]/60 transition-all duration-300 hover:shadow-xl hover:shadow-[#e879f9]/15">
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Company Logo */}
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-gradient-to-br from-blue-500/20 to-[#d946ef]/20 border border-gray-700 flex items-center justify-center overflow-hidden">
-                        <svg className="w-12 h-12 text-blue-400/40" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd" />
-                        </svg>
+                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-white border border-gray-700 flex items-center justify-center overflow-hidden p-2">
+                        {exp.logo ? (
+                          <img 
+                            src={exp.logo} 
+                            alt={`${exp.company} logo`} 
+                            className="w-full h-full object-contain"
+                          />
+                        ) : (
+                          <svg className="w-12 h-12 text-blue-400/40" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clipRule="evenodd" />
+                          </svg>
+                        )}
                       </div>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1">
-                      <div className="mb-6">
-                        <h3 className="text-2xl md:text-3xl font-bold text-[#d946ef] mb-2">{exp.company}</h3>
-                        <p className="text-gray-400 text-sm">Multiple roles through career progression</p>
+                      {/* Most recent role - displayed like single role */}
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
+                        <div>
+                          <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">{exp.roles[0].role}</h3>
+                          <p className="text-lg text-[#d946ef] font-semibold">{exp.company}</p>
+                        </div>
+                        <span className="inline-block px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold whitespace-nowrap self-start">
+                          {exp.roles[0].period} - {exp.roles[0].endPeriod}
+                        </span>
                       </div>
-
-                      {/* Individual roles */}
-                      <div className="space-y-6">
-                        {exp.roles.map((role, roleIndex) => (
-                          <div 
-                            key={roleIndex}
-                            className="ml-0 md:ml-6 pl-6 border-l-2 border-[#e879f9]/30 hover:border-[#e879f9]/70 transition-colors"
-                          >
-                            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
-                              <h4 className="text-xl font-bold text-white">{role.role}</h4>
-                              <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold whitespace-nowrap self-start">
-                                {role.period} - {role.endPeriod}
-                              </span>
-                            </div>
-                            
-                            <p className="text-gray-300 mb-3 text-base leading-relaxed">{role.description}</p>
-                            
-                            <div className="grid md:grid-cols-1 gap-2">
-                              {role.highlights.map((highlight) => (
-                                <div key={highlight} className="flex items-start gap-2">
-                                  <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path d="M5 13l4 4L19 7"></path>
-                                  </svg>
-                                  <span className="text-gray-400 text-base">{highlight}</span>
-                                </div>
-                              ))}
-                            </div>
+                      
+                      <p className="text-gray-300 mb-4 leading-relaxed">{exp.roles[0].description}</p>
+                      
+                      <div className="grid md:grid-cols-1 gap-3 mb-6">
+                        {exp.roles[0].highlights?.map((highlight) => (
+                          <div key={highlight} className="flex items-start gap-2">
+                            <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                              <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span className="text-gray-400 text-base">{highlight}</span>
                           </div>
                         ))}
                       </div>
+
+                      {/* Previous roles - shown below with left border */}
+                      {exp.roles.length > 1 && (
+                        <div className="space-y-4 mt-6">
+                          {exp.roles.slice(1).map((role, roleIndex) => (
+                            <div 
+                              key={roleIndex}
+                              className="pl-6 border-l-2 border-[#e879f9]/30 hover:border-[#e879f9]/70 transition-colors"
+                            >
+                              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-2">
+                                <h4 className="text-xl font-bold text-white">{role.role}</h4>
+                                <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold whitespace-nowrap self-start">
+                                  {role.period} - {role.endPeriod}
+                                </span>
+                              </div>
+                              {role.highlights && role.highlights.length > 0 && (
+                                <>
+                                  <p className="text-gray-300 mb-2 text-base leading-relaxed">{role.description}</p>
+                                  <div className="grid md:grid-cols-1 gap-2">
+                                    {role.highlights.map((highlight) => (
+                                      <div key={highlight} className="flex items-start gap-2">
+                                        <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span className="text-gray-400 text-base">{highlight}</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
