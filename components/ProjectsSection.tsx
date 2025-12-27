@@ -49,11 +49,21 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80',
   },
   {
-    title: 'My Finance Hub (Coming Soon)',
-    description: '',
-    tech: [],
+    title: 'My Finance Hub',
+    description: 'A professional FinTech dashboard that transforms static Excel financial data into interactive visualizations, providing a comprehensive view of net worth, investments, employment history, and financial planning tools.',
+    tech: ['Python', 'Dash', 'Plotly', 'Pandas', 'Excel'],
     gradient: 'from-orange-500 to-red-500',
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
+    image: '/images/myfinancehub.png',
+    features: [
+      'Real-time net worth tracking across multiple asset classes and liabilities with historical trend analysis',
+      'Investment portfolio monitoring with cost basis tracking, performance metrics, and benchmark comparisons against major indices',
+      'Employment history visualization showing salary progression, business days worked, and compensation trends',
+      'Interactive financial calculators including tax estimator, true cost calculator, and FIRE (Financial Independence Retire Early) planner',
+      'Personal benchmarking comparing your metrics to Australian population data for net worth, salary, and superannuation'
+    ],
+    implementation: 'Built using Plotly Dash and Dash Mantine Components for a responsive, modern UI. The application uses a custom data loader class that parses structured Excel workbooks containing Assets & Liabilities, Employment, and Investment data across multiple sheets. Implemented sophisticated data processing with Pandas to handle time-series analysis, linear interpolation for continuous chart rendering, and CAGR calculations. Features include dynamic metric cards with percentage changes, interactive Plotly charts with custom hover templates, and real-time calculations for tax scenarios using 2025-26 Australian tax tables. The dashboard includes client-side callbacks for smooth navigation and rotating greeting messages for personalization.',
+    challenges: 'The primary challenge was parsing heterogeneous Excel data and making it modular to handle various input formats while maintaining data integrity. Implemented flexible date parsing, section header detection, and robust validation to ensure required sheets exist. Adjusted visualizations to optimally convey complex financial data—using dual-axis charts for cost basis vs market value comparisons, color-coded performance metrics (green for gains, red for losses), and inflation-adjusted projections for FIRE calculations. Built a sophisticated interpolation system to display continuous chart lines even with sparse data points, ensuring smooth visual transitions between quarterly snapshots.',
+    githubUrl: 'https://github.com/VincentG03/my-finance-hub'
   },
 ];
 
