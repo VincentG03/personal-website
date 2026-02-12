@@ -7,6 +7,20 @@ import ParticleBackground from './ParticleBackground';
 
 const experiences = [
   {
+    role: 'Data Science Intern',
+    company: 'Commonwealth Bank of Australia',
+    period: 'Nov 2025',
+    endPeriod: 'Jan 2026',
+    logo: '/images/CBA.png',
+    description: 'Engineered containerised AI memory systems and automated evaluation frameworks to enable persistent user personalisation.',
+    highlights: [
+      'Developed a containerised long term memory system using Python, Docker, and ChromaDB by integrating MCP servers and agents into an internal framework to enable persistent user personalisation.',
+      'Built an automated evaluation framework with DeepEval to measure performance across 25+ test cases, achieving ~85% accuracy in both contextual retrieval and information extraction via segmented memory structures.',
+      'Achieved a finalist position in a company wide tech hackathon for designing a centralised engineer onboarding platform aimed at reducing technical friction through personalised task tracking and resource consolidation.',
+    ],
+    tech: ['Python', 'Docker', 'ChromaDB', 'DeepEval', 'MCP'],
+  },
+  {
     role: 'Business Analyst Intern',
     company: 'Jetstar',
     period: 'Jun 2025',
